@@ -1,10 +1,15 @@
+:root{
+    --primary-container-color: #181D3A;
+    --main-background-color: #4A8FCF;
+}
+
 @font-face {
     font-family: Michroma;
     src: url("/assets/fonts/Michroma-Regular.ttf");
     }
 
 body{
-    background-color: #4A8FCF;
+    background: linear-gradient(180deg, #4A8FCF 0%, rgba(100, 120, 225, 0.33) 39.58%, #48538F 100%);
     margin: 0px;
     font-family: Michroma;
 }
@@ -12,7 +17,7 @@ body{
 #header{
     display: flex;
     height : 90px;
-    background-color: #0A0017;
+    background: linear-gradient(180deg, #181D3A 0%, #171835 100%);
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
     text-align: center;
@@ -20,7 +25,11 @@ body{
 }
 
 #title{
-    color: whitesmoke;
+    display: inline-block;
+    background: linear-gradient(180deg, #FF6B00 0%, rgba(211, 231, 237, 0.50) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-family: "Michroma";
     margin-top: 0px;
     padding-top: 18px;
