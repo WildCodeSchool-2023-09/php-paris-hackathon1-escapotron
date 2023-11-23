@@ -1,33 +1,32 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="/assets/images/favicon.png">
+    <link rel="icon" href="/assets/images/escapotron-icon.svg">
 
-    <title>{% block title %}{% endblock %}</title>
+    <title>Escapotron{% block title %}{% endblock %}</title>
 
     <link rel="stylesheet" href="/assets/css/style.css">
     {% block stylesheet %}{% endblock %}
 </head>
 
-{% block header %}
-
-<div id = "header">
-<img id ="titleIcon" src = "/assets/images/ESCAPOTRON ICON.png">
-<h1 id = "title">Escapotron</h1>
-</div>
-
-{% endblock %}
-
 <body>
+    <header>
+        <a href="/">
+            <img id="titleIcon" src="/assets/images/escapotron-icon.svg">
+        </a>
+        <a href="/">
+            <h1>Escapotron</h1>
+        </a>
+    </header>
 
-{% block content %}
+    <div id="main-content">
+        {% block content %}
+        {% endblock %}
+    </div>
 
-{% endblock %}
-
-{% block javascript %}{% endblock %}
-
+    <script src="/assets/js/script.js"></script>
 </body>
 </html>

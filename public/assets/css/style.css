@@ -1,32 +1,86 @@
+/* --- RESET CSS --- */
+
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+/* img {
+  max-width: 100%;
+  height: auto;
+} */
+
+/* --- */
+
 :root{
-    --primary-container-color: #181D3A;
-    --main-background-color: #4A8FCF;
-    --main-font-color : #DCDCDC;
+    --color-primary-container: #181D3A;
+    --color-main-background: #4A8FCF;
+    --color-main-font : #DCDCDC;
+    --gradient-main-bg: linear-gradient(180deg, #4A8FCF 0%, #414E93 39.58%, #2E3977 100%);
+    --gradient-main: linear-gradient(180deg, #181D3A 0%, #171835 100%);
+    --gradient-cta: linear-gradient(180deg, #832700 0%, #55220D 100%);
+    --gradient-card: linear-gradient(180deg, #1D023E 0%, #110323 100%);
 }
 
 @font-face {
     font-family: Michroma;
     src: url("/assets/fonts/Michroma-Regular.ttf");
-    }
+}
 
-body{
-    background: linear-gradient(180deg, rgba(100, 121, 225, 0.912) 0%, #384591eb 39.58%, #2779c5cd 100%);
-    margin: 0px;
+body {
+    background: var(--gradient-main-bg);
     font-family: Michroma;
     height: 932px;
 }
 
-#header{
+/* HEADER */
+
+header {
     display: flex;
     height : 90px;
-    background: linear-gradient(180deg, #181D3A 0%, #171835 100%);
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
-    text-align: center;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+    border-radius: 0px 0px 25px 25px;
+    background: var(--gradient-main);
+    filter: drop-shadow(0px 8px 8px rgba(0, 0, 0, 0.25));
 }
 
-#title{
+header img {
+    height: 60px;
+    margin-bottom: 5px;
+    padding-top: 19px;
+    margin-left: 50px;
+    margin-right: 15px;
+}
+
+header h1 {
     display: inline-block;
     background: linear-gradient(180deg, #FF6B00 0%, rgba(211, 231, 237, 0.50) 100%);
     background-clip: text;
@@ -37,72 +91,24 @@ body{
     padding-top: 18px;
 }
 
-#titleIcon{
-    height: 40px;
-    width: 40px;
-    margin-bottom: 5px;
-    padding-top: 19px;
-    margin-left: 50px;
-    margin-right: 15px;
+/* MAIN CONTENT */
+
+#main-content {
 }
 
-.card{
-    display: block;
-    height: 500px;
-    width: 380px;
-    margin-top: 40%;
-    background-color: #0A0017;
-    border-radius: 25px;
-    margin-left: auto;
-    margin-right: auto;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-}
+/* INDEX */
 
-.cardTitle {
-    display: block;
-    color: whitesmoke;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    padding-top: 25px;
-}
-
-.grid_icons {
-    display: grid;
-    grid-template-columns: auto auto;
-    padding: 5%;
-}
-.grid_item {
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-}
-
-.link {
-    text-decoration: none;
-    color: white;
-    font-size: 20px;
-    text-align: center;
-}
-
-#homeSlogan1{
-    display: block;
+#homeSlogan1 {
     width: 300px;
     margin-left: 50px;
-    color: var(--main-font-color);
+    color: var(--color-main-font);
     font-size: 40px;
     margin-bottom: 40px;
     margin-top: 40px;
 }
 
-#homeImg{
-    display: block;
-    margin-left : auto;
-    margin-right: auto;
-}
-
-#homeSlogan2{
-    color: var(--main-font-color);
+#homeSlogan2 {
+    color: var(--color-main-font);
     font-size: 40px;
     width: 270px;
     margin-left: 120px;
@@ -111,113 +117,139 @@ body{
     text-align: right;
 }
 
-.homeButton{
+#homeImg {
+    display: block;
+    margin: 0 auto;
+}
+
+/* CTA */
+
+.cta-btn {
     display: block;
     font-family: Michroma;
-    color : var(--main-font-color);
+    color : var(--color-main-font);
     font-size: 20px;
     text-decoration: none;
     margin-right: auto;
     margin-left: auto;
     width: 340px;
     height: 64px;
-    background: linear-gradient(180deg, #181D3A 0%, #171835 100%);
-    border-radius: 20px;
     text-align: center;
     height: 64px;
     line-height: 64px;
     white-space: nowrap;
     margin-bottom: 15px;
-    box-shadow: -2px -2px 4px 0px rgba(0, 0, 0, 0.25), 8px 8px 8px 0px rgba(0, 0, 0, 0.25);
+
+    border-radius: 25px;
+    filter: drop-shadow(-2px -2px 4px rgba(0, 0, 0, 0.25)) drop-shadow(8px 8px 8px rgba(0, 0, 0, 0.25));
 }
 
-.homeButton2{
-    display: block;
-    font-family: Michroma;
-    color : var(--main-font-color);
-    font-size: 20px;
-    text-decoration: none;
-    margin-right: auto;
-    margin-left: auto;
-    width: 340px;
-    height: 64px;
-    background: linear-gradient(180deg, #952D00 0%, #491703 100%);
-    border-radius: 20px;
-    text-align: center;
-    height: 64px;
-    line-height: 64px;
-    white-space: nowrap;
-    margin-bottom: 15px;
-    box-shadow: -2px -2px 4px 0px rgba(0, 0, 0, 0.25), 8px 8px 8px 0px rgba(0, 0, 0, 0.25);
+.cta-btn.cad {
+    background: var(--gradient-main);
 }
 
-#explicationImg {
-    display: block;
-    margin-top: 3rem;
-    margin-left : auto;
-    margin-right: auto;
+.cta-btn.esc {
+    background: var(--gradient-cta);
 }
 
-#homeSlogan3 {
-    display: block;
-    align-items: end;
-    width: 300px;
-    margin-left: 10px;
-    color: var(--main-font-color);
-    font-size: 20px;
-    margin-bottom: 40px;
-    margin-top: 50px;
-}
+/* CAROUSEL */
 
-#homeSlogan4 {
-    display: block;
-    align-items: end;
-    width: 300px;
-    margin-left: 140px;
-    color: var(--main-font-color);
-    font-size: 20px;
-    margin-bottom: 40px;
-    margin-top: 30px;
+#app {
+    height: 100%;
 }
+  
+ul#carousel {
+    position: absolute;
+    top: 216px;
 
-#homeSlogan5 {
-    display: block;
-    align-items: end;
-    width: 300px;
-    margin-left: 10px;
-    color: var(--main-font-color);
-    font-size: 20px;
-    margin-bottom: 40px;
-    margin-top: 30px;
-}
-
-#homeSlogan6 {
-    display: block;
-    align-items: end;
-    width: 300px;
-    margin-left: 140px;
-    color: var(--main-font-color);
-    font-size: 20px;
-    margin-bottom: 40px;
-    margin-top: 30px;
-}
-
-.slider {
     display: flex;
-    justify-content: space-between;
-    margin-left: 7rem;
-    margin-right: 7rem;
-    margin-top: 1rem;
+
+    width: 100%;
+    height: 520px;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    overflow: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
 }
 
-.slider_button {
+ul#carousel::-webkit-scrollbar {
+    display: none;
+}
+
+li.card-choice {
+    margin: auto 50px;
+    height: 500px;
+
+    border-radius: 25px;
+    background: var(--gradient-card);
+    filter: drop-shadow(-2px -2px 4px rgba(0, 0, 0, 0.25)) drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.25));
+
+    flex: 1 0 380px;
+
+    scroll-snap-align: center;
+}
+
+li.card-choice p {
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}
+
+li.card-choice h2 {
+    color: whitesmoke;
+    text-align: center;
+    margin-top: 25px;
+}
+
+li.card-choice .grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    margin: 54px 10px;
+    height: 300px;
+}
+
+li.card-choice .grid-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    height: 150px;
+}
+
+.grid-item img {
+    filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.25));
+}
+
+.grid-item img,
+.grid-item p {
+    cursor: pointer;
+}
+
+#slider {
+    position: absolute;
+    bottom: 162px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.slider-btn {
     border-radius: 24px;
-    background: var(--h-indigo, #0A0017);
+    background: #0A0017;
     box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.25);
-    width: 2rem;
-    height: 2rem;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
 }
-
 .homeButton3{
     display: block;
     font-family: Michroma;
@@ -284,4 +316,55 @@ body{
     white-space: nowrap;
     margin-bottom: 10px;
     box-shadow: -2px -2px 4px 0px rgba(0, 0, 0, 0.25), 8px 8px 8px 0px rgba(0, 0, 0, 0.25);
+}
+
+#explicationImg {
+    display: block;
+    margin-top: 3rem;
+    margin-left : auto;
+    margin-right: auto;
+}
+
+#homeSlogan3 {
+    display: block;
+    align-items: end;
+    width: 300px;
+    margin-left: 10px;
+    color: var(--main-font-color);
+    font-size: 20px;
+    margin-bottom: 40px;
+    margin-top: 50px;
+}
+
+#homeSlogan4 {
+    display: block;
+    align-items: end;
+    width: 300px;
+    margin-left: 140px;
+    color: var(--main-font-color);
+    font-size: 20px;
+    margin-bottom: 40px;
+    margin-top: 30px;
+}
+
+#homeSlogan5 {
+    display: block;
+    align-items: end;
+    width: 300px;
+    margin-left: 10px;
+    color: var(--main-font-color);
+    font-size: 20px;
+    margin-bottom: 40px;
+    margin-top: 30px;
+}
+
+#homeSlogan6 {
+    display: block;
+    align-items: end;
+    width: 300px;
+    margin-left: 140px;
+    color: var(--main-font-color);
+    font-size: 20px;
+    margin-bottom: 40px;
+    margin-top: 30px;
 }

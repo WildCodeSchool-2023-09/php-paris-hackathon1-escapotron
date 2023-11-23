@@ -4,19 +4,23 @@ namespace App\Controller;
 
 class PageController extends AbstractController
 {
-    public function home(): string
+
+    /**
+     * Display home page
+     */
+    public function index(): string
     {
-        return $this->twig->render('/home.html.twig');
+        return $this->twig->render('index.html.twig');
     }
 
-    public function event(): string
+    public function app(): string
     {
-        return $this->twig->render('/event.html.twig');
+        return $this->twig->render('escape.html.twig');
     }
 
     public function explication(): string
     {
-        return $this->twig->render('/explication.html.twig');
+        return $this->twig->render('/infos.html.twig');
     }
     public function generateur(): string
     {
