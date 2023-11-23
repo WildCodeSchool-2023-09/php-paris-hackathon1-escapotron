@@ -10,7 +10,7 @@
     }
 
 body{
-    background: linear-gradient(180deg, #4A8FCF 0%, rgba(100, 120, 225, 0.33) 39.58%, #48538F 100%);
+    background: linear-gradient(180deg, rgba(100, 121, 225, 0.912) 0%, #384591eb 39.58%, #2779c5cd 100%);
     margin: 0px;
     font-family: Michroma;
     height: 932px;
@@ -93,10 +93,11 @@ body{
     text-align: right;
 }
 
-.homeButtons{
+.homeButton{
     display: block;
     font-family: Michroma;
     color : var(--main-font-color);
+    font-size: 20px;
     text-decoration: none;
     margin-right: auto;
     margin-left: auto;
@@ -105,5 +106,29 @@ body{
     background: linear-gradient(180deg, #181D3A 0%, #171835 100%);
     border-radius: 20px;
     text-align: center;
-    padding-top: 10px;
+    height: 64px;
+    line-height: 64px;
+    white-space: nowrap;
+    margin-bottom: 15px;
+    box-shadow: -2px -2px 4px 0px rgba(0, 0, 0, 0.25), 8px 8px 8px 0px rgba(0, 0, 0, 0.25);
+}
+
+.homeButton2{
+    display: block;
+    font-family: Michroma;
+    color : var(--main-font-color);
+    font-size: 20px;
+    text-decoration: none;
+    margin-right: auto;
+    margin-left: auto;
+    width: 340px;
+    height: 64px;
+    background: linear-gradient(180deg, #952D00 0%, #491703 100%);
+    border-radius: 20px;
+    text-align: center;
+    height: 64px;
+    line-height: 64px;
+    white-space: nowrap;
+    margin-bottom: 15px;
+    box-shadow: -2px -2px 4px 0px rgba(0, 0, 0, 0.25), 8px 8px 8px 0px rgba(0, 0, 0, 0.25);
 }

@@ -11,4 +11,9 @@ class PageController extends AbstractController
     {
         return $this->twig->render('/home.html.twig');
     }
+
+    public function event(): string
+    {
+        return $this->twig->render('/event.html.twig');
+    }
 }
