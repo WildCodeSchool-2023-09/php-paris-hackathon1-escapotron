@@ -104,8 +104,7 @@ class PageController extends AbstractController
 
         $ton = [];
 
-        $excuseparfaite = "désolé " . $gens . " je ne peux pas venir à " .
-        $_GET['fete'] . " car j'ai " . $excuse . ", " . $ton;
+        $excuseparfaite = "désolé " . $gens . " je ne peux pas venir à " . $_GET['fete'] . " car j'ai " . $excuse . ", " . $ton;
 
         return $this->twig->render('finale.html.twig', ['excuseparfaite' => $excuseparfaite]);
     }
