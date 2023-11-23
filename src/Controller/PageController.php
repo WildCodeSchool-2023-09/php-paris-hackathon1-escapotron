@@ -7,14 +7,14 @@ class PageController extends AbstractController
     /**
      * Display home page
      */
-    public function home(): string
+    public function index(): string
     {
-        return $this->twig->render('/home.html.twig');
+        return $this->twig->render('index.html.twig');
     }
 
-    public function event(): string
+    public function app(): string
     {
-        return $this->twig->render('/event.html.twig');
+        return $this->twig->render('escape.html.twig');
     }
 
     public function generateur(): string
@@ -26,7 +26,7 @@ class PageController extends AbstractController
         $amis = ['les potos', 'la bande', 'mes bestas'];
         $collegues = ['l\'équipe', 'chers collègues', 'tout le monde'];
 
-        $travail = ['j\'ai rendez-vous avec le président', 'un client a urgemment besoin de mes services', 'le quaterly back-up strategic outsourcing ne va pas se faire tout seul', '']
+        $travail = ['j\'ai rendez-vous avec le président', 'un client a urgemment besoin de mes services', 'le quaterly back-up strategic outsourcing ne va pas se faire tout seul', ''];
 
         //gens//
 
