@@ -32,6 +32,7 @@ class PageController extends AbstractController
 
         $travail = ['j\'ai rendez-vous avec le président', 'un client a urgemment besoin de mes services',
         'le quaterly back-up strategic outsourcing ne va pas se faire tout seul', ''];
+
         //gens//
 
         if ($_GET['gens'] === "famille") {
@@ -61,10 +62,29 @@ class PageController extends AbstractController
             $excuse = array_rand($absurde);
         }
 
-        if ($_GET['excuse'] === "santé") {
+        if ($_GET['excuse'] === "sante") {
             $excuse = array_rand($sante);
         } else {
             $excuse = array_rand($politique);
+        }
+
+        //ton//
+        $delicat = [];
+        $corpo = [];
+        $neutre = [];
+        $mechant = [];
+
+        if ($_GET['ton'] === "delicat") {
+            $ton = array_rand($delicat);
+        }
+        if ($_GET['ton'] === "corpo") {
+            $ton = array_rand($corpo);
+        }
+        if ($_GET['ton'] === "neutre") {
+            $ton = array_rand($neutre);
+        } else {
+            $ton = array_rand($mechant);
+
         }
 
         $ton = [];
