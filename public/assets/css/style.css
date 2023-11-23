@@ -50,7 +50,7 @@ body{
     display: block;
     height: 500px;
     width: 380px;
-    margin-top: 50px;
+    margin-top: 25%;
     background-color: #0A0017;
     border-radius: 25px;
     margin-left: auto;
@@ -65,6 +65,24 @@ body{
     margin-right: auto;
     text-align: center;
     padding-top: 25px;
+}
+
+.grid_icons {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 5%;
+}
+.grid_item {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.link {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    text-align: center;
 }
 
 #homeSlogan1{
