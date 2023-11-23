@@ -84,7 +84,6 @@ class PageController extends AbstractController
             $ton = array_rand($neutre);
         } else {
             $ton = array_rand($mechant);
-
         }
 
         $ton = [];
@@ -93,5 +92,10 @@ class PageController extends AbstractController
         $_GET['fete'] . " car j'ai " . $excuse . ", " . $ton;
 
         return $this->twig->render('finale.html.twig', ['excuseparfaite' => $excuseparfaite]);
+    }
+
+    public function result(): string
+    {
+        return $this->twig->render('/result.html.twig');
     }
 }
