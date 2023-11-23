@@ -9,5 +9,6 @@
 return [
     '' => ['PageController', 'home',],
     'event' => ['PageController', 'event',],
-    'explication' => ['PageController', 'explication',]
+    'explication' => ['PageController', 'explication'],
+
 ];

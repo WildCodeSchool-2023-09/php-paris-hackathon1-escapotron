@@ -151,6 +151,57 @@ body{
     box-shadow: -2px -2px 4px 0px rgba(0, 0, 0, 0.25), 8px 8px 8px 0px rgba(0, 0, 0, 0.25);
 }
 
+#explicationImg {
+    display: block;
+    margin-top: 3rem;
+    margin-left : auto;
+    margin-right: auto;
+}
+
+#homeSlogan3 {
+    display: block;
+    align-items: end;
+    width: 300px;
+    margin-left: 10px;
+    color: var(--main-font-color);
+    font-size: 20px;
+    margin-bottom: 40px;
+    margin-top: 50px;
+}
+
+#homeSlogan4 {
+    display: block;
+    align-items: end;
+    width: 300px;
+    margin-left: 140px;
+    color: var(--main-font-color);
+    font-size: 20px;
+    margin-bottom: 40px;
+    margin-top: 30px;
+}
+
+#homeSlogan5 {
+    display: block;
+    align-items: end;
+    width: 300px;
+    margin-left: 10px;
+    color: var(--main-font-color);
+    font-size: 20px;
+    margin-bottom: 40px;
+    margin-top: 30px;
+}
+
+#homeSlogan6 {
+    display: block;
+    align-items: end;
+    width: 300px;
+    margin-left: 140px;
+    color: var(--main-font-color);
+    font-size: 20px;
+    margin-bottom: 40px;
+    margin-top: 30px;
+}
+
 .slider {
     display: flex;
     justify-content: space-between;
@@ -165,4 +216,24 @@ body{
     box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.25);
     width: 2rem;
     height: 2rem;
+}
+
+.homeButton3{
+    display: block;
+    font-family: Michroma;
+    color : var(--main-font-color);
+    font-size: 20px;
+    text-decoration: none;
+    margin-right: auto;
+    margin-left: auto;
+    width: 340px;
+    height: 64px;
+    background: linear-gradient(180deg, #952D00 0%, #491703 100%);
+    border-radius: 20px;
+    text-align: center;
+    height: 64px;
+    line-height: 64px;
+    white-space: nowrap;
+    margin-bottom: 10px;
+    box-shadow: -2px -2px 4px 0px rgba(0, 0, 0, 0.25), 8px 8px 8px 0px rgba(0, 0, 0, 0.25);
 }
