@@ -35,36 +35,46 @@ class PageController extends AbstractController
         $collegues = ['l\'équipe', 'chers collègues', 'tout le monde'];
 
 
-        $travail = ['rendez-vous avec le président', 'un client qui a urgemment besoin de mes services',
+        $travail = ['rendez-vous avec le président',
+                    'un client qui a urgemment besoin de mes services',
                     'le quaterly back-up strategic outsourcing qui ne va pas se faire tout seul',
                     'un mail primordial à écrire'];
-
-        $absurde = ['rencontré un oiseau dans l\'espace', 'mon chien qui m\'a défié au strip poker',
+        $absurde = ['rencontré un oiseau dans l\'espace',
+                    'mon chien qui m\'a défié au strip poker',
                     'le roi de Suede qui vient réparer mon xylophone',
                     'besoin de remonter le temps pour trouver une excuse',
-                    'volé la déclaration d\'indépendance des états-unis', 'ggrzuig grzuguzg rupvo',
-                    'cours de yoyo', 'mon chien qui a mangé ma voiture'];
-
-        $sante = ['perdu mes dents', 'une grippe du pied', 'une fracture d\'un endroit que je garderai secret',
+                    'volé la déclaration d\'indépendance des états-unis',
+                    'ggrzuig grzuguzg rupvo',
+                    'cours de yoyo',
+                    'mon chien qui a mangé ma voiture'];
+        $sante = [  'perdu mes dents',
+                    'une grippe du pied',
+                    'une fracture d\'un endroit que je garderai secret',
                     'attrapé la peste qui infecte mon village',
-                    'une crise cardiaque', 'un avc'];
-
-        $politique = ['été enfermé dans un goulag', 'commencé une révolution au Machu Pichu', 'le KGB aux trousses',
+                    'une crise cardiaque',
+                    'un avc'];
+        $politique = [  'été enfermé dans un goulag',
+                        'commencé une révolution au Machu Pichu',
+                        'le KGB aux trousses',
                         'été réquisitionné pour le dépouillement des élections'];
 
-
-        $delicat = ['en espérant ne pas vous faire trop de peine', 'je vous présente mes plus sincères excuses',
+        $delicat = ['en espérant ne pas vous faire trop de peine',
+                    'je vous présente mes plus sincères excuses',
                     'je vous prie de bien vouloir m\'excuser',
                     'sachez que je regrette amèrement cette absence'];
-
-        $corpo = ['cordialement', 'amicalement votre', 'professionnellement votre', 'bien à vous',
-                  'dans l\'espoir que mes attentions trouverons écho à votre mansuétude, je vous souhtaite une productive soirée'];
-
-        $neutre = ['encore désolé tout le monde', 'je suis vraiment confus',
-                   'ce sera pour la prochaine fois'];
-
-        $mechant = ['et je ne vous aime pas', 'idiots', 'imbéciles',
-                    'et je vous invite à aller vous asseoir sur un cactus'];
+        $corpo = [  'cordialement',
+                    'amicalement votre',
+                    'professionnellement votre',
+                    'bien à vous',
+                    'dans l\'espoir que mes attentions trouverons écho à votre mansuétude,
+                    je vous souhtaite une productive soirée'];
+        $neutre = [ 'encore désolé tout le monde',
+                    'je suis vraiment confus',
+                    'ce sera pour la prochaine fois'];
+        $mechant = ['et je ne vous aime pas',
+                    'idiots',
+                    'imbéciles',
+                    'et je vous invite à aller vous asseoir sur un cactus',];
 
 
         //gens//
@@ -82,11 +92,12 @@ class PageController extends AbstractController
         } else {
             $gens = array_rand($collegues);
         }
+
         //fete : pas de tableau de valeur : le GET renvoie directement la fete choisie//
         //excuse//
-        $absurde = [];
-        $sante = [];
-        $politique = [];
+        $absurde = [''];
+        $sante = [''];
+        $politique = [''];
 
         if ($_GET['excuse'] === "travail") {
             $excuse = array_rand($travail);
@@ -103,10 +114,10 @@ class PageController extends AbstractController
         }
 
         //ton//
-        $delicat = [];
-        $corpo = [];
-        $neutre = [];
-        $mechant = [];
+        $delicat = [''];
+        $corpo = [''];
+        $neutre = [''];
+        $mechant = [''];
 
         if ($_GET['ton'] === "delicat") {
             $ton = array_rand($delicat);
@@ -120,9 +131,10 @@ class PageController extends AbstractController
             $ton = array_rand($mechant);
         }
 
-        $ton = [];
+        $ton = [''];
 
-        $excuseparfaite = "désolé " . $gens . " je ne peux pas venir à " . $_GET['fete'] . " car j'ai " . $excuse . ", " . $ton;
+        $excuseparfaite = "désolé " . $gens . " je ne peux pas venir à "
+                        . $_GET['fete'] . " car j'ai " . $excuse . ", " . $ton;
 
         return $this->twig->render('result.html.twig', ['excuseparfaite' => $excuseparfaite]);
     }
