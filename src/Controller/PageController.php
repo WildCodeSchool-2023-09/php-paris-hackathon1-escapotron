@@ -16,4 +16,8 @@ class PageController extends AbstractController
     {
         return $this->twig->render('/event.html.twig');
     }
+
+    public function explication(): string{
+        return $this->twig->render('/explication.html.twig');
+    }
 }
