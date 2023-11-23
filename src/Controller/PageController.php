@@ -26,6 +26,8 @@ class PageController extends AbstractController
         $amis = ['les potos', 'la bande', 'mes bestas'];
         $collegues = ['l\'équipe', 'chers collègues', 'tout le monde'];
 
+        $travail = ['j\'ai rendez-vous avec le président', 'un client a urgemment besoin de mes services', 'le quaterly back-up strategic outsourcing ne va pas se faire tout seul', '']
+
         //gens//
 
         if ($_GET['gens'] === "famille"){
