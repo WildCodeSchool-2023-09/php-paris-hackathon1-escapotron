@@ -46,12 +46,13 @@ function setExcuseChoice(excuse, value, slide, send = false) {
         input.value = value;
         slidesContainer.scrollTo(slideWidth*slide, 0);
 
-        sliderBtns[slide].classList.add('currentSlide');
-        sliderBtns[slide-1].classList.remove('currentSlide');
-
         if (send) {
             sendChoices.submit();
         }
+        
+        sliderBtns[slide].classList.add('currentSlide');
+        sliderBtns[slide-1].classList.remove('currentSlide');
+
     });
 }
 
