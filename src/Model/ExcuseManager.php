@@ -94,17 +94,17 @@ class ExcuseManager
 
     // TON
 
-    public const DELICAT = ['en espérant ne pas vous faire trop de peine',
-                'je vous présente mes plus sincères excuses',
-                'je vous prie de bien vouloir m\'excuser',
-                'sachez que je regrette amèrement cette absence',
+    public const DELICAT = ['En espérant ne pas vous faire trop de peine',
+                'Je vous présente mes plus sincères excuses',
+                'Je vous prie de bien vouloir m\'excuser',
+                'Sachez que je regrette amèrement cette absence',
             ];
 
-    public const CORPO = [  'cordialement',
-                'amicalement votre',
-                'professionnellement votre',
-                'bien à vous',
-                'je vous souhtaite une productive soirée',
+    public const CORPO = [  'Cordialement',
+                'Amicalement votre',
+                'Professionnellement votre',
+                'Bien à vous, Michel',
+                'Je vous souhtaite une productive soirée',
             ];
 
     public const NEUTRE = [ 'encore désolé tout le monde',
