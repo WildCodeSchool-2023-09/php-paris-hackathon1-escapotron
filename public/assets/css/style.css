@@ -172,7 +172,7 @@ ul#carousel {
 
     list-style: none;
 
-    overflow: scroll;
+    overflow: hidden;
     scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
     scrollbar-width: none;
@@ -250,6 +250,9 @@ li.card-choice .grid-item {
     height: 24px;
     cursor: pointer;
 }
+
+/* --- */
+
 .homeButton3{
     display: block;
     font-family: Michroma;

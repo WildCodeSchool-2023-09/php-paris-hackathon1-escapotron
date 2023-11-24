@@ -1,102 +1,108 @@
 {% extends 'layout.html.twig' %}
 
 {% block content %}
-    <div id="app">
+    <form id="app" action="result" method="get">
         <ul id="carousel">
             <li class="card-choice" id="card-fete">
                 <h2>Quelle fête ?</h2>
                 <div class="grid-container">
-                    <div class="grid-item">
+                    <div class="grid-item" id="halloween">
                         <img src="/assets/images/halloween.svg">
                         <p>Halloween</p>
                     </div>
-                    <div class="grid-item">
+                    <div class="grid-item" id="noel">
                         <img src="/assets/images/noel.svg">
                         <p>Noël</p>
                     </div>
-                    <div class="grid-item">
+                    <div class="grid-item" id="nouvel-an">
                         <img src="/assets/images/nouvel-an.svg">
                         <p>Nouvel An</p>
                     </div>
-                    <div class="grid-item">
+                    <div class="grid-item" id="hanoucca">
                         <img src="/assets/images/hanoucca.svg">
                         <p>Hanoucca</p>
                     </div>
                 </div>
+                <input type="hidden" id="fete" name="fete" value="">
             </li>
 
             <li class="card-choice" id="card-gens">
                 <h2>Sans qui ?</h2>
                 <div class="grid-container">
-                    <div class="grid-item">
+                    <div class="grid-item" id="famille">
                         <img src="/assets/images/famille.svg">
                         <p>Famille</p>
                     </div>
-                    <div class="grid-item">
+                    <div class="grid-item" id="partenaire">
                         <img src="/assets/images/partenaire.svg">
                         <p>Conjoint</p>
                     </div>
-                    <div class="grid-item">
+                    <div class="grid-item" id="amis">
                         <img src="/assets/images/amis.svg">
                         <p>Amis</p>
                     </div>
-                    <div class="grid-item">
+                    <div class="grid-item" id="collegues">
                         <img src="/assets/images/collegues.svg">
                         <p>Collègues</p>
                     </div>
                 </div>
+                <input type="hidden" id="gens" name="gens" value="">
             </li>
 
-            <li class="card-choice" id="card-excuse">
+            <li class="card-choice" id="card-raison">
                 <h2>Quelle excuse ?</h2>
                 <div class="grid-container">
-                    <div class="grid-item">
+                    <div class="grid-item" id="travail">
                         <img src="/assets/images/travail.svg">
                         <p>Travail</p>
                     </div>
-                    <div class="grid-item">
+                    <div class="grid-item" id="absurde">
                         <img src="/assets/images/absurde.svg">
                         <p>Absurde</p>
                     </div>
-                    <div class="grid-item">
+                    <div class="grid-item" id="sante">
                        <img src="/assets/images/sante.svg">
                        <p>Santé</p>
                     </div>
-                    <div class="grid-item">
+                    <div class="grid-item" id="politique">
                         <img src="/assets/images/politique.svg">
                         <p>Politique</p>
                     </div>
                 </div>
+                <input type="hidden" id="raison" name="raison" value="">
             </li>
 
             <li class="card-choice" id="card-ton">
                 <h2>Quel ton ?</h2>
                 <div class="grid-container">
-                    <div class="grid-item">
+                    <div class="grid-item" id="corpo">
                         <img src="/assets/images/corpo.svg">
                         <p>Corpo</p>
                     </div>
-                    <div class="grid-item">
+                    <div class="grid-item" id="delicat">
                         <img src="/assets/images/delicat.svg">
                         <p>Délicat</p>
                     </div>
-                    <div class="grid-item">
+                    <div class="grid-item" id="neutre">
                         <img src="/assets/images/neutre.svg">
                         <p>Neutre</p>
                     </div>
-                    <div class="grid-item">
+                    <div class="grid-item" id="mechant">
                         <img src="/assets/images/mechant.svg">
                         <p>Méchant</p>
                     </div>
                 </div>
+                <input type="hidden" id="ton" name="ton" value="">
             </li>
         </ul>
 
         <nav id="slider">
             <div class="slider-btn fete"></div>
             <div class="slider-btn gens"></div>
-            <div class="slider-btn excuse"></div>
+            <div class="slider-btn raison"></div>
             <div class="slider-btn ton"></div>
         </nav>
-    </div>
+
+        <input type="submit" value="" style="display: none">
+    </form>
 {% endblock %}
