@@ -12,7 +12,6 @@ class PageController extends AbstractController
     public function __construct()
     {
         parent::__construct();
-        $excuseManager = new ExcuseManager();
     }
 
     /**
@@ -28,7 +27,8 @@ class PageController extends AbstractController
         return $this->twig->render('escape.html.twig');
     }
 
-    public function explication(): string
+
+    public function infos(): string
     {
         return $this->twig->render('/infos.html.twig');
     }
@@ -39,5 +39,6 @@ class PageController extends AbstractController
         $excuseParfaite = $excuseManager->generateur($fete, $gens, $raison, $ton);
         
         return $this->twig->render('result.html.twig', ['excuseParfaite' => $excuseParfaite]);
+
     }
 }
