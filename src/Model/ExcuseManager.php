@@ -9,15 +9,22 @@ class ExcuseManager
     public const FAMILLE = ['mes chéris',
                     'la smallah',
                     'tout le monde',
+                    'la grosse mif',
+                    'mon fiston',
+                    'mon beau-frère chéri',
+                    'belle maman adorée',
+                    'grand-maman',
+                    'mon père'
                     ];
 
 
     public const CONJOINT = ['mon bébé',
                 'chouchou',
-                'ptit coeur',
+                'mon ptit coeur',
                 'mon coeur',
                 'mon amour',
                 'bébou',
+                'my love'
                 ];
 
     public const AMIS = ['les potos',
@@ -34,47 +41,52 @@ class ExcuseManager
                 'chers collègues',
                 'tout le monde',
                 'chers collaborateurs',
+                'chers confrères'
                 ];
-
 
     // RAISONS
 
-    public const TRAVAIL = ['rendez-vous avec le président',
-                'un client qui a urgemment besoin de mes services',
-                'le quaterly back-up strategic outsourcing qui ne va pas se faire tout seul',
-                'un mail primordial à écrire',
+    public const TRAVAIL = [
+                'j\'ai rendez-vous avec le président',
+                'j\'ai un client qui a urgemment besoin de mes services',
+                'le quaterly back-up strategic outsourcing va pas se faire tout seul',
+                'j\'ai un mail primordial à écrire',
                 ];
 
-    public const ABSURDE = ['rencontré un oiseau dans l\'espace',
-                'mon chien qui m\'a défié au strip poker',
-                'le roi de Suede qui vient réparer mon xylophone',
-                'besoin de remonter le temps pour trouver une excuse',
-                'volé la déclaration d\'indépendance des états-unis',
-                'ggrzuig grzuguzg rupvo',
-                'cours de yoyo',
-                'mon chien qui a mangé ma voiture',
-                'prévu de me transformer en loup-garou',
-                'mangé un avocat',
-                'mangé un croissant',
-                'été enlevé par des extra terrestres',
-                'trouvé une vache',
+    public const ABSURDE = [
+                'j\'ai rencontré un oiseau dans l\'espace',
+                'j\'ai mon chien qui m\'a défié au strip poker',
+                'j\'ai le roi de Suede qui vient réparer mon xylophone',
+                'j\'ai besoin de remonter le temps pour trouver une excuse',
+                'j\'ai volé la déclaration d\'indépendance des états-unis',
+                'j\'ai ggrzuig grzuguzg rupvo',
+                'j\'ai cours de yoyo',
+                'j\'ai mon chien qui a mangé ma voiture',
+                'j\'ai prévu de me transformer en loup-garou',
+                'j\'ai mangé un avocat',
+                'j\'ai mangé un croissant',
+                'j\'ai été enlevé par des extra terrestres',
+                'j\'ai trouvé une vache',
                 ];
 
-    public const SANTE = [  'perdu mes dents',
-                'une grippe du pied',
-                'une fracture d\'un endroit que je garderai secret',
-                'attrapé la peste qui infecte mon village',
-                'une crise cardiaque',
-                'un avc',
-                'perdu mon siamoi',
-                'un gros furoncle',
-                'attrapé un rhume',
+    public const SANTE = [ 
+                'j\'ai perdu mes dents',
+                'j\'ai une grippe du pied',
+                'j\'ai une fracture d\'un endroit que je garderai secret',
+                'j\'ai attrapé la peste qui infecte mon village',
+                'j\'ai une crise cardiaque',
+                'j\'ai actuellement un AVC',
+                'j\'ai perdu mon jumeau siamois',
+                'j\'ai un gros furoncle',
+                'j\'ai attrapé un rhume',
+                'j\'ai cassé ma cuisse',
                 ];
 
-    public const POLITIQUE = [  'été enfermé dans un goulag',
-                    'commencé une révolution au Machu Pichu',
-                    'le KGB aux trousses',
-                    'été réquisitionné pour le dépouillement des élections',
+    public const POLITIQUE = [  "j'ai été enfermé dans un goulag",
+                    "j'ai commencé une révolution au Machu Pichu",
+                    "j'ai le KGB aux trousses",
+                    "j'ai été réquisitionné pour le dépouillement des élections",
+                    "je vais manifester seul contre la solitude",
                 ];
 
 
@@ -90,8 +102,7 @@ class ExcuseManager
                 'amicalement votre',
                 'professionnellement votre',
                 'bien à vous',
-                'dans l\'espoir que mes attentions trouverons écho à votre mansuétude,
-                je vous souhtaite une productive soirée',
+                'je vous souhtaite une productive soirée',
             ];
 
     public const NEUTRE = [ 'encore désolé tout le monde',
@@ -163,6 +174,6 @@ class ExcuseManager
         }
 
         return "« Désolé " . $excuse['gens'] . " je ne peux pas venir pour "
-                        . $excuse['fete'] . " car j'ai " . $excuse['raison'] . ", " . $excuse['ton'] . ". »";
+                        . $excuse['fete'] . " car " . $excuse['raison'] . ", " . $excuse['ton'] . ". »";
     }
 }
