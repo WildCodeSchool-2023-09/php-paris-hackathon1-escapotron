@@ -8,21 +8,30 @@ const firstBtn = document.querySelector("#slider .slider-btn.fete");
 const secondBtn = document.querySelector("#slider .slider-btn.gens");
 const thirdBtn = document.querySelector("#slider .slider-btn.raison");
 const fourthBtn = document.querySelector("#slider .slider-btn.ton");
+const sliderBtns = [firstBtn, secondBtn, thirdBtn, fourthBtn];
 
 firstBtn.addEventListener("click", () => {
     slidesContainer.scrollTo(0, 0);
+    document.querySelector('.currentSlide').classList.toggle('currentSlide');
+    firstBtn.classList.toggle('currentSlide');
 });
 
 secondBtn.addEventListener("click", () => {
     slidesContainer.scrollTo(slideWidth, 0);
+    document.querySelector('.currentSlide').classList.toggle('currentSlide');
+    secondBtn.classList.toggle('currentSlide');
 });
 
 thirdBtn.addEventListener("click", () => {
     slidesContainer.scrollTo(2 * slideWidth, 0);
+    document.querySelector('.currentSlide').classList.toggle('currentSlide');
+    thirdBtn.classList.toggle('currentSlide');
 });
 
 fourthBtn.addEventListener("click", () => {
     slidesContainer.scrollTo(3 * slideWidth, 0);
+    document.querySelector('.currentSlide').classList.toggle('currentSlide');
+    fourthBtn.classList.toggle('currentSlide');
 });
 
 // CHOICES
@@ -36,6 +45,10 @@ function setExcuseChoice(excuse, value, slide, send = false) {
     choiceBtn.addEventListener('click', function(e) {
         input.value = value;
         slidesContainer.scrollTo(slideWidth*slide, 0);
+
+        sliderBtns[slide].classList.add('currentSlide');
+        sliderBtns[slide-1].classList.remove('currentSlide');
+
         if (send) {
             sendChoices.submit();
         }
