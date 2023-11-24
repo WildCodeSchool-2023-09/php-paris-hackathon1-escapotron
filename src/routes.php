@@ -10,5 +10,5 @@ return [
     '' => ['PageController', 'index',],
     'app' => ['PageController', 'app',],
     'infos' => ['PageController', 'infos',],
-    'result' => ['PageController', 'generateur', ['fete', 'gens', 'raison', 'ton']],
+    'result' => ['PageController', 'showResult', ['fete', 'gens', 'raison', 'ton']],
 ];

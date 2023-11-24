@@ -30,7 +30,7 @@ fourthBtn.addEventListener("click", () => {
 const sendChoices = document.querySelector("form#app");
 
 function setExcuseChoice(excuse, value, slide, send = false) {
-    const choiceBtn = document.querySelector(".grid-item#"+value+" img, .grid-item#"+value+" p");
+    const choiceBtn = document.querySelector(".grid-item#"+value);
     const input = document.querySelector('input#'+excuse);
 
     choiceBtn.addEventListener('click', function(e) {
@@ -59,5 +59,5 @@ setExcuseChoice("raison", 'politique', 3);
 
 setExcuseChoice("ton", 'corpo', 4, true);
 setExcuseChoice("ton", 'delicat', 4, true);
-setExcuseChoice("ton", 'neutre', 4), true;
+setExcuseChoice("ton", 'neutre', 4, true);
 setExcuseChoice("ton", 'mechant', 4, true);
