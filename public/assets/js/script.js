@@ -49,7 +49,7 @@ function setExcuseChoice(excuse, value, slide, send = false) {
         if (send) {
             sendChoices.submit();
         }
-        
+
         sliderBtns[slide].classList.add('currentSlide');
         sliderBtns[slide-1].classList.remove('currentSlide');
 
@@ -75,3 +75,10 @@ setExcuseChoice("ton", 'corpo', 4, true);
 setExcuseChoice("ton", 'delicat', 4, true);
 setExcuseChoice("ton", 'neutre', 4, true);
 setExcuseChoice("ton", 'mechant', 4, true);
+
+const excuse = document.querySelector("#excuseParfaite");
+const copyText = document.querySelector("#copy-text");
+
+copyText.addEventListener('click', function() {
+    navigator.clipboard.writeText(excuse.innerHTML);
+})

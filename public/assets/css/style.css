@@ -414,4 +414,5 @@ li.card-choice .grid-item {
 img#copy-text {
     display: block;
     margin-left: 400px;
+    cursor: pointer;
 }
