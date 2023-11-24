@@ -51,6 +51,7 @@ class ExcuseManager
                 'j\'ai un client qui a urgemment besoin de mes services',
                 'le quaterly back-up strategic outsourcing va pas se faire tout seul',
                 'j\'ai un mail primordial à écrire',
+                "j'ai une PR à merge dans le main.."
                 ];
 
     public const ABSURDE = [
@@ -58,15 +59,16 @@ class ExcuseManager
                 'j\'ai mon chien qui m\'a défié au strip poker',
                 'j\'ai le roi de Suede qui vient réparer mon xylophone',
                 'j\'ai besoin de remonter le temps pour trouver une excuse',
-                'j\'ai volé la déclaration d\'indépendance des états-unis',
-                'j\'ai ggrzuig grzuguzg rupvo',
-                'j\'ai cours de yoyo',
+                'j\'ai volé la déclaration d\'indépendance des États-Unis',
+                'j\'ai ODSIHG398EZDGJ',
+                'j\'ai cours de yoyo aquatique',
                 'j\'ai mon chien qui a mangé ma voiture',
                 'j\'ai prévu de me transformer en loup-garou',
                 'j\'ai mangé un avocat',
                 'j\'ai mangé un croissant',
                 'j\'ai été enlevé par des extra terrestres',
-                'j\'ai trouvé une vache',
+                'j\'ai rencontré une vache octoplégique',
+                'je passe sous un tunnel'
                 ];
 
     public const SANTE = [ 
@@ -111,11 +113,13 @@ class ExcuseManager
                 'on se revoit vite',
             ];
 
-    public const MECHANT = ['et je ne vous aime pas',
-                'idiots',
-                'imbéciles',
-                'et je vous invite à aller vous asseoir sur un cactus',
-                'et j\'ai juste pas envie de vous voir',
+    public const MECHANT = ['Et je ne vous aime pas',
+                'Andouilles',
+                'Imbéciles',
+                'Con de mime',
+                'Aussi, je vous invite à aller vous asseoir sur un cactus',
+                'De plus, j\'ai juste pas envie de vous voir',
+                'Et j\'ai pas envie de voir vos tronches',
             ];
 
     public function generateur(string $fete, string $gens, string $raison, string $ton): string
@@ -173,7 +177,7 @@ class ExcuseManager
             $excuse['ton'] = self::MECHANT[array_rand(self::MECHANT)];
         }
 
-        return "« Désolé " . $excuse['gens'] . " je ne peux pas venir pour "
-                        . $excuse['fete'] . " car " . $excuse['raison'] . ", " . $excuse['ton'] . ". »";
+        return "« Désolé " . $excuse['gens'] . ", je ne peux pas venir pour "
+                        . $excuse['fete'] . " car " . $excuse['raison'] . ". " . $excuse['ton'] . ". »";
     }
 }
