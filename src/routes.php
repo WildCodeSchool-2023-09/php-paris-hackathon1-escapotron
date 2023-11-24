@@ -10,6 +10,6 @@ return [
     '' => ['PageController', 'home',],
     'event' => ['PageController', 'event',],
     'explication' => ['PageController', 'explication'],
-    'result' => ['PageController', 'result'],
+    'finale' => ['PageController', 'generateur'],
 
 ];
