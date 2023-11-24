@@ -1,0 +1,102 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+    <div id="app">
+        <ul id="carousel">
+            <li class="card-choice" id="card-fete">
+                <h2>Quelle fête ?</h2>
+                <div class="grid-container">
+                    <div class="grid-item">
+                        <img src="/assets/images/halloween.svg">
+                        <p>Halloween</p>
+                    </div>
+                    <div class="grid-item">
+                        <img src="/assets/images/noel.svg">
+                        <p>Noël</p>
+                    </div>
+                    <div class="grid-item">
+                        <img src="/assets/images/nouvel-an.svg">
+                        <p>Nouvel An</p>
+                    </div>
+                    <div class="grid-item">
+                        <img src="/assets/images/hanoucca.svg">
+                        <p>Hanoucca</p>
+                    </div>
+                </div>
+            </li>
+
+            <li class="card-choice" id="card-gens">
+                <h2>Sans qui ?</h2>
+                <div class="grid-container">
+                    <div class="grid-item">
+                        <img src="/assets/images/famille.svg">
+                        <p>Famille</p>
+                    </div>
+                    <div class="grid-item">
+                        <img src="/assets/images/partenaire.svg">
+                        <p>Conjoint</p>
+                    </div>
+                    <div class="grid-item">
+                        <img src="/assets/images/amis.svg">
+                        <p>Amis</p>
+                    </div>
+                    <div class="grid-item">
+                        <img src="/assets/images/collegues.svg">
+                        <p>Collègues</p>
+                    </div>
+                </div>
+            </li>
+
+            <li class="card-choice" id="card-excuse">
+                <h2>Quelle excuse ?</h2>
+                <div class="grid-container">
+                    <div class="grid-item">
+                        <img src="/assets/images/travail.svg">
+                        <p>Travail</p>
+                    </div>
+                    <div class="grid-item">
+                        <img src="/assets/images/absurde.svg">
+                        <p>Absurde</p>
+                    </div>
+                    <div class="grid-item">
+                       <img src="/assets/images/sante.svg">
+                       <p>Santé</p>
+                    </div>
+                    <div class="grid-item">
+                        <img src="/assets/images/politique.svg">
+                        <p>Politique</p>
+                    </div>
+                </div>
+            </li>
+
+            <li class="card-choice" id="card-ton">
+                <h2>Quel ton ?</h2>
+                <div class="grid-container">
+                    <div class="grid-item">
+                        <img src="/assets/images/corpo.svg">
+                        <p>Corpo</p>
+                    </div>
+                    <div class="grid-item">
+                        <img src="/assets/images/delicat.svg">
+                        <p>Délicat</p>
+                    </div>
+                    <div class="grid-item">
+                        <img src="/assets/images/neutre.svg">
+                        <p>Neutre</p>
+                    </div>
+                    <div class="grid-item">
+                        <img src="/assets/images/mechant.svg">
+                        <p>Méchant</p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+        <nav id="slider">
+            <div class="slider-btn fete"></div>
+            <div class="slider-btn gens"></div>
+            <div class="slider-btn excuse"></div>
+            <div class="slider-btn ton"></div>
+        </nav>
+    </div>
+{% endblock %}
