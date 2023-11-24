@@ -4,7 +4,6 @@ namespace App\Controller;
 
 class PageController extends AbstractController
 {
-    
 
     /**
      * Display home page
@@ -58,25 +57,35 @@ class PageController extends AbstractController
             $gens = array_rand($conjoint);
         // GENS //
 
+
         $famille = ['mes chéris',
                     'la smallah',
                     'tout le monde',
                     ];
 
+
         $conjoint = ['mon bébé',
                     'chouchou',
                     'ptit coeur',
+                    'mon coeur',
+                    'mon amour',
+                    'bébou',
                     ];
 
         $amis = ['les potos',
                 'la bande',
                 'mes bestas',
-                'les amis'
+                'les amis',
+                'les potes',
+                'les gars',
+                'les compagnons',
+                'la team',
                 ];
 
         $collegues = [ 'l\'équipe',
                     'chers collègues',
-                    'tout le monde'
+                    'tout le monde',
+                    'chers collaborateurs',
                     ];
 
 
@@ -96,6 +105,11 @@ class PageController extends AbstractController
                     'ggrzuig grzuguzg rupvo',
                     'cours de yoyo',
                     'mon chien qui a mangé ma voiture',
+                    'prévu de me transformer en loup-garou',
+                    'mangé un avocat',
+                    'mangé un croissant',
+                    'été enlevé par des extra terrestres',
+                    'trouvé une vache',
                     ];
 
         $sante = [  'perdu mes dents',
@@ -104,6 +118,9 @@ class PageController extends AbstractController
                     'attrapé la peste qui infecte mon village',
                     'une crise cardiaque',
                     'un avc',
+                    'perdu mon siamoi',
+                    'un gros furoncle',
+                    'attrapé un rhume',
                     ];
 
         $politique = [  'été enfermé dans un goulag',
@@ -132,12 +149,14 @@ class PageController extends AbstractController
         $neutre = [ 'encore désolé tout le monde',
                     'je suis vraiment confus',
                     'ce sera pour la prochaine fois',
+                    'on se revoit vite',
                 ];
 
         $mechant = ['et je ne vous aime pas',
                     'idiots',
                     'imbéciles',
                     'et je vous invite à aller vous asseoir sur un cactus',
+                    'et j\'ai juste pas envie de vous voir',
                 ];
 
         if ($fete === "halloween") {
